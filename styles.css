@@ -443,6 +443,41 @@ h1, h2, h3 {
     position: relative;
 }
 
+/* Notice Banner */
+.notice-banner {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(212, 175, 55, 0.1);
+    animation: pulseBorder 3s infinite alternate;
+}
+
+.notice-banner i {
+    font-size: 3rem;
+    color: var(--gold);
+    filter: drop-shadow(0 0 10px rgba(212,175,55,0.5));
+}
+
+.notice-banner p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-main);
+    text-align: left;
+    margin: 0;
+}
+
+@keyframes pulseBorder {
+    from { box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 10px rgba(212, 175, 55, 0.1); border-color: rgba(212,175,55,0.5); }
+    to { box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 25px rgba(212,175,55,0.3), inset 0 0 30px rgba(212, 175, 55, 0.3); border-color: var(--gold); }
+}
+
 .contact-cta {
     max-width: 800px;
     margin: 0 auto;
