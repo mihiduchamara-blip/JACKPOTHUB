@@ -564,3 +564,411 @@ h1, h2, h3 {
     .contact-cta h2 { font-size: 2rem; }
     .whatsapp-btn { width: 100%; }
 }
+
+/* ================================= */
+/* Registration Form Specific Styles */
+/* ================================= */
+
+.registration-section {
+    padding: 140px 20px 80px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.form-container {
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 30px;
+    padding: 60px 50px;
+    max-width: 850px;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 30px;
+}
+
+.form-icon {
+    font-size: 4rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(212,175,55,0.4));
+}
+
+.form-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.form-section {
+    margin-bottom: 45px;
+    background: rgba(0,0,0,0.2);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: transform 0.3s;
+}
+
+.form-section:hover {
+    border-color: rgba(212,175,55,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.section-heading {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-heading i {
+    color: var(--gold);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+.required {
+    color: #ef4444;
+    margin-left: 3px;
+}
+
+.optional {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.form-input {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-input::placeholder {
+    color: rgba(255,255,255,0.3);
+}
+
+.form-input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(212,175,55,0.15);
+    background: rgba(0,0,0,0.5);
+}
+
+/* Icons within inputs */
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 18px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.whatsapp-color { color: #25D366 !important; }
+
+.input-icon-pad {
+    padding-left: 50px;
+    width: 100%;
+}
+
+/* Custom Select */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-select {
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-select option {
+    background-color: var(--bg-darker);
+    color: white;
+}
+
+.select-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--gold);
+}
+
+/* Checkboxes */
+.checkbox-group {
+    margin-bottom: 15px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    gap: 15px;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    height: 24px;
+    width: 24px;
+    background-color: rgba(0,0,0,0.4);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    border-color: var(--gold);
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+.checkmark:after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: none;
+    color: #051409;
+    font-size: 14px;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-text {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+}
+
+.gold-link {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* reCaptcha Mock */
+.recaptcha-container {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.g-recaptcha-mock {
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.g-recaptcha-mock .recaptcha-checkbox .square-mark {
+    background-color: #fff;
+    border: 2px solid #c1c1c1;
+    border-radius: 2px;
+    height: 28px;
+    width: 28px;
+}
+
+.g-recaptcha-mock .recaptcha-text {
+    color: #555;
+    font-size: 14px;
+    font-family: Roboto, helvetica, arial, sans-serif;
+    margin-left: 5px;
+}
+
+.g-recaptcha-mock .recaptcha-logo img {
+    height: 48px;
+}
+
+/* Validation Errors */
+.error-msg {
+    display: none;
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    animation: fadeInUp 0.3s;
+}
+
+.has-error .error-msg {
+    display: block;
+}
+
+.has-error .form-input, .has-error .checkmark {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* Submission */
+.form-actions {
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensures button is clickable */
+}
+
+.submit-btn {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+.icon-right {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.submit-btn:hover .icon-right {
+    transform: translateX(8px);
+}
+
+.otp-verification-container {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid var(--gold);
+    padding: 15px 20px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 25px;
+}
+
+.otp-note {
+    color: var(--gold-light);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Success Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-modal {
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.2);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 500px;
+    text-align: center;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.success-icon i {
+    font-size: 5rem;
+    color: #22c55e;
+    margin-bottom: 25px;
+}
+
+.success-modal h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.success-modal p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.mt-4 {
+    margin-top: 30px;
+}
+
+/* Form Responsive */
+@media (max-width: 768px) {
+    .registration-section {
+        padding: 120px 15px 60px;
+    }
+    
+    .form-container {
+        padding: 40px 20px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .form-section {
+        padding: 25px 15px;
+    }
+}
